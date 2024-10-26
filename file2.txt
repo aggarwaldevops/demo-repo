@@ -1,4 +1,0 @@
-Hello Guys,
-How are you. Very well.
-
-Git reset command will use to check how to automatically revert the update.
