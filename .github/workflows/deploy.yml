@@ -1,22 +1,22 @@
-name: Deploy
-
-on:
+on: 
   push:
     branches:
       - master
+name: Deploy website on push
 
 jobs:
-  deploy:
+  web-deploy:
+    name: Deploy website
     runs-on: ubuntu-latest
- 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up LFTP
-        run: sudo apt-get install -y lftp
-
-      - name: Deploy to FTP
-        run: |
-          chmod +x deploy.sh
-          ./deploy.sh ${{ secrets.FTP_SERVER }} ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }} ./ http://betatestrepo.netvision.com.au/
+    # Checkout the repository
+    - name: Get latest code
+      uses: actions/checkout@v4
+    # sync files via FTP
+    - name: Sync files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /
