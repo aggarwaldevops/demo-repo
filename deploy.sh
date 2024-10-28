@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # FTP server details
-FTP_HOST="$1"
-FTP_USERNAME="$2"
-FTP_PASSWORD="$3"
-LOCAL_DIR="$4"
-REMOTE_DIR="$5"
+FTP_HOST="ftp.betatestrepo.netvision.com.au"
+FTP_USERNAME="betatestrepo"
+FTP_PASSWORD="tP-Db8a&Mj1l27@QXf"
+LOCAL_DIR="./"
+REMOTE_DIR="/public_html"
 
 # Print debug information
 echo "FTP_HOST: $FTP_HOST"
