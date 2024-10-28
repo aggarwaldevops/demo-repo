@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # FTP server details
-FTP_HOST=$1
-FTP_USERNAME=$2
-FTP_PASSWORD=$3
-LOCAL_DIR=$4
-REMOTE_DIR=$5
+FTP_HOST="$1"
+FTP_USERNAME="$2"
+FTP_PASSWORD="$3"
+LOCAL_DIR="$4"
+REMOTE_DIR="$5"
 
 # Print debug information
 echo "FTP_HOST: $FTP_HOST"
