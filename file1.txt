@@ -1,2 +1,1 @@
-this is a new text file to add into demo-repo
-Added new content here.
+New Text added for deployment
