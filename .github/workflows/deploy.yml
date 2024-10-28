@@ -19,5 +19,6 @@ jobs:
 
       - name: Deploy to FTP
         run: |
-          # chmod +x deploy.sh
+          # MODE CHANGED
+          chmod +x deploy.sh
           ./deploy.sh ${{ secrets.FTP_SERVER }} ${{ secrets.FTP_USER }} ${{ secrets.FTP_PASSWORD }} ./ http://betatestrepo.netvision.com.au/
