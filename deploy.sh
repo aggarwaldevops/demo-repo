@@ -1,7 +1,7 @@
 #!/bin/bash
-
+echo "INVOKED NOW"
 # Exit immediately if a command exits with a non-zero status
-# set -e
+set -e
 
 # FTP server details
 FTP_HOST=$1
