@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # FTP server details
 FTP_HOST=$1
 FTP_USERNAME=$2
