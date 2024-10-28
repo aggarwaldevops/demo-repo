@@ -14,7 +14,9 @@ echo "LOCAL_DIR: $LOCAL_DIR"
 echo "REMOTE_DIR: $REMOTE_DIR"
 
 # Use lftp to mirror the local directory to the remote directory, skipping SSL verification
-lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" <<EOF
-set ftp:ssl-allow no
-mirror -R ./ /public_html  # Change this to your target directory
-EOF
+lftp -d -c "
+set ssl:verify-certificate no;
+open -u $FTP_USER,$FTP_PASSWORD $FTP_SERVER;
+mirror -R --verbose --only-newer --parallel=10 $LOCAL_DIR $REMOTE_DIR;
+bye;
+"
