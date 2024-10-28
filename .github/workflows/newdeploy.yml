@@ -35,4 +35,4 @@ jobs:
       - name: Deploy to FTP
         run: |
           chmod +x deploy.sh
-          ./deploy.sh "${{ secrets.FTP_SERVER }}" "${{ secrets.FTP_USER }}" "${{ secrets.FTP_PASSWORD }}" "./" "/home/betatestrepo/"
+          ./deploy.sh "${{ secrets.FTP_SERVER }}" "${{ secrets.FTP_USER }}" "${{ secrets.FTP_PASSWORD }}" "./" "/home/"
