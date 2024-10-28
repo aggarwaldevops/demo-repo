@@ -19,4 +19,4 @@ jobs:
       - name: Deploy to FTP
         run: |
           chmod +x deploy.sh
-          ./deploy.sh ${{ secrets.FTP_SERVER }} ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }} ./ ./
+          ./deploy.sh ${{ secrets.FTP_SERVER }} ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }} ./ http://betatestrepo.netvision.com.au/
